@@ -1,78 +1,85 @@
+/*
+*{
+  padding/margin: 0;
+}
+*/
+
 body {
   font-family: sans-serif;
 }
 
 header {
-  background-color: rgb(46, 42, 42);
-  height: 100px;
+  display: flex;
+  padding: 1rem;
+  background-color: #444;
+  color: lightgrey;
+  justify-content: center;
 }
 
-header img {
-  float: left;
-  margin: 15px 0px 0px 80px;
-  background-color: black;
-}
-
-header li {
-  display: inline-block;
-  margin: 40px;
+header div {
+  display: flex;
+  justify-content: space-between;
+  width: 960px;
 }
 
 nav {
-  width: 90%;
-  margin: auto;
+  width: 100%; /*as width as the parent*/
+  padding-right: 3rem;
 }
 
-nav a {
-  color: lightgray;
+ul {
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around; /*gaps at the end*/
+  align-items: center;
 }
 
 main {
-  width: 80%;
-  margin: 30px auto;
+  max-width: 960px;
+  margin: 0px auto;
+  padding: 30px 0;
 }
 
-main li {
-  float: left;
-  margin: 30px 30px 30px 0px;
+section {
+  /*3 imgs in a row*/
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0; /*margin overlaps*/
 }
 
-section img {
-  float: left;
+article {
+  display: flex;
+  justify-content: space-between;
 }
 
-section div {
-  width: 50%;
-  float: left;
-  padding: 30px;
+article img {
+  max-height: 400px;
 }
 
-h2 {
-  font-size: 2rem;
-  text-align: left;
-}
-
-p {
-  height: 280px;
-  overflow: auto;
-  font-size: 1rem;
+div p {
+  max-height: 330px; /*avoid height with percentages*/
+  overflow-y: scroll;
 }
 
 button {
   background-color: black;
   color: white;
-  font-size: 20px;
+  padding: 0.5rem 2rem; /*left and right, top and bottom*/
+  margin-top: 0.5rem;
+  border: 1px solid black;
   transition: 350ms;
   cursor: pointer;
-  padding: 10px;
+  width: fit-content;
 }
 
 button:hover {
-  background: green;
+  color: black;
+  background-color: aliceblue;
 }
 
 footer {
-  background-color: rgb(46, 42, 42);
-  height: 100px;
-  clear: left;
+  background-color: #444444;
+  height: 150px;
 }
